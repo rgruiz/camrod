@@ -1,0 +1,474 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #efe6d8;
+  --color-secondary: #926e41;
+  --color-tertiary: #554d44;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-family: 'Commissioner', sans-serif;
+}
+
+.navbar {
+  background-color: var(--color-primary);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.logo-wrapper {
+  flex: 1;
+}
+
+.menu-desktop {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-desktop ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.contacto-btn {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.2rem;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: var(--color-secondary);
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-primary);
+  text-align: right;
+  padding: 1rem 1.5rem;
+  animation: fadeIn 0.3s ease-in-out;
+  gap: 0.8rem;
+}
+
+.menu-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: flex-end;
+}
+
+.menu-mobile ul li {
+  list-style: none;
+}
+
+.menu-mobile.active {
+  display: flex;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.navbar a:hover {
+  color: #0077cc;
+}
+
+.navbar img.logo {
+  height: 36px;
+}
+
+.navbar a.boton-contacto {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.navbar a.boton-contacto:hover {
+  background-color: #7a5934;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap;
+    padding-right: 3.5rem;
+    position: relative;
+  }
+
+  .menu-desktop,
+  .contacto-btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    order: 2;
+  }
+
+  .logo-wrapper {
+    order: 1;
+    flex: 1;
+  }
+
+  .menu-mobile {
+    order: 3;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  width: 100vw;
+  height: 130vh;
+  background: url('../img/hero-3.png') no-repeat center center;
+  background-size: contain;
+  background-color: var(--color-primary);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  padding-left: 10%;
+  padding-top: 6vh;
+  color: var(--color-tertiary);
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    background-size: cover;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
+
+section:not(.hero) {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+section {
+  padding: 3rem 2rem;
+  margin: auto;
+}
+
+section.catalogo {
+  max-width: 100%;
+  padding: 2em; /* o ajustalo como prefieras */
+}
+
+.catalogo {
+  width: 100%;
+  background-color: var(--color-primary);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.catalogo .productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  background-color: var(--color-primary);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.producto {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 250px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (max-width: 600px) {
+  .catalogo .productos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+.producto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--color-secondary);
+  position: relative;
+  display: inline-block;
+}
+
+@media (min-width:768px) {
+  .titulo-seccion::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 80%;
+    background-color: var(--color-secondary);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+}
+
+.filtros {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.filtro-btn {
+  background-color: transparent;
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filtro-btn.activo,
+.filtro-btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 5vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-contenido {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.sobre, .contacto {
+  text-align: center;
+}
+
+.contacto ul {
+  list-style: none;
+  margin-top: 1rem;
+  line-height: 2;
+}
+
+.iconos-contacto {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.iconos-contacto li a {
+  font-size: 2rem;
+  color: var(--color-secondary);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.iconos-contacto li a:hover {
+  color: #0077cc;
+  transform: scale(1.2);
+}
+
+.footer {
+  text-align: center;
+  background-color: #eee;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel .slides {
+  display: flex;
+  width: 300vw; /* para 3 slides */
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel .slide {
+  flex: 0 0 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.carousel .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .indicators {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.carousel .indicators div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel .indicators div.active {
+  background-color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 100vh;
+  }
+
+  .carousel .slide {
+    background-size: cover !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .carousel .slides {
+    height: 100vh;
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://camrod.com.ar/sitemap.xml
