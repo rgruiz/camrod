@@ -131,9 +131,11 @@
     <footer class="footer">
       <p>&copy; <?php echo date("Y"); ?> CAMROD. Todos los derechos reservados.</p>
     </footer>
-    <div id="imagen-modal" class="modal">
-        <span class="cerrar-modal">&times;</span>
-        <img class="modal-contenido" id="imagen-modal-grande">
+    <div class="modal">
+      <span class="cerrar-modal">&times;</span>
+      <div class="modal-flecha modal-prev">&lt;</div>
+      <div class="modal-flecha modal-next">&gt;</div>
+      <div class="modal-contenido"></div>
     </div>
     </body>
 </html>
