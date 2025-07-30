@@ -1,0 +1,76 @@
+/* Catalog section */
+section.catalogo {
+  max-width: 100%;
+  padding: 2em; /* o ajustalo como prefieras */
+}
+
+.catalogo {
+  width: 100%;
+  background-color: var(--color-primary);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.catalogo .productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  background-color: var(--color-primary);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.producto {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 250px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (max-width: 600px) {
+  .catalogo .productos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+.producto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.filtros {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.filtro-btn {
+  background-color: transparent;
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filtro-btn.activo,
+.filtro-btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}

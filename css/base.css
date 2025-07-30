@@ -1,0 +1,59 @@
+/* Base and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #efe6d8;
+  --color-secondary: #926e41;
+  --color-tertiary: #554d44;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-family: 'Commissioner', sans-serif;
+}
+
+section:not(.hero) {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+section {
+  padding: 3rem 2rem;
+  margin: auto;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--color-secondary);
+  position: relative;
+  display: inline-block;
+}
+
+@media (min-width:768px) {
+  .titulo-seccion::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 80%;
+    background-color: var(--color-secondary);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
