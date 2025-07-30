@@ -482,7 +482,7 @@ html {
 
 .carousel .slides {
   display: flex;
-  width: 300vw; /* para 3 slides */
+  width: 300vw; /* width is overridden dynamically */
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
