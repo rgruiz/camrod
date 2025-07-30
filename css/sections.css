@@ -1,0 +1,30 @@
+/* Sobre nosotros and contacto sections */
+.sobre, .contacto {
+  text-align: center;
+}
+
+.contacto ul {
+  list-style: none;
+  margin-top: 1rem;
+  line-height: 2;
+}
+
+.iconos-contacto {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.iconos-contacto li a {
+  font-size: 2rem;
+  color: var(--color-secondary);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.iconos-contacto li a:hover {
+  color: #0077cc;
+  transform: scale(1.2);
+}

@@ -34,6 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Commissioner:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
+  <!-- Single aggregated stylesheet imports all modular CSS files -->
   <link rel="stylesheet" href="css/estilos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 

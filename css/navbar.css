@@ -1,0 +1,153 @@
+/* Navigation bar styles */
+.navbar {
+  background-color: var(--color-primary);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.logo-wrapper {
+  flex: 1;
+}
+
+.menu-desktop {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-desktop ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.contacto-btn {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.2rem;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: var(--color-secondary);
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-primary);
+  text-align: right;
+  padding: 1rem 1.5rem;
+  animation: fadeIn 0.3s ease-in-out;
+  gap: 0.8rem;
+}
+
+.menu-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: flex-end;
+}
+
+.menu-mobile ul li {
+  list-style: none;
+}
+
+.menu-mobile.active {
+  display: flex;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.navbar a:hover {
+  color: #0077cc;
+}
+
+.navbar img.logo {
+  height: 36px;
+}
+
+.navbar a.boton-contacto {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.navbar a.boton-contacto:hover {
+  background-color: #7a5934;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap;
+    padding-right: 3.5rem;
+    position: relative;
+  }
+
+  .menu-desktop,
+  .contacto-btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    order: 2;
+  }
+
+  .logo-wrapper {
+    order: 1;
+    flex: 1;
+  }
+
+  .menu-mobile {
+    order: 3;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
