@@ -7,7 +7,7 @@
 
   <title>CAMROD | Encontrá toallas, acolchados, alfombras, sábanas y más productos textiles de diseño y calidad para tu hogar! 😍</title>
   <meta name="description" content="En Camrod encontrás toallas, acolchados, alfombras, sábanas y más productos textiles de diseño y calidad para tu hogar.">
-  <meta name="keywords" content="textiles, toallas, acolchados, sabanas, hogar, alfombras, ropa blanca, blanqueria, juego de cama, dormitorio, baño, Camrod, Camrod Textiles">
+  <meta name="keywords" content="textiles, toallas, acolchados, sábanas, hogar, alfombras, ropa blanca, blanqueria, juego de cama, dormitorio, baño, Camrod, Camrod Textiles">
   <meta name="author" content="Camrod">
   <meta name="robots" content="index, follow">
 
