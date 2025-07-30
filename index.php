@@ -82,7 +82,7 @@
     </nav>
   </header>
 
-  <div class="carousel">
+  <div id="hero" class="carousel">
     <div class="slides">
       <div class="slide"><img src="img/hero-6.png" alt="Acolchados y sabanas negras"></div>
       <div class="slide"><img src="img/hero-3.png" alt="Toallas y alfombra de baño"></div>
